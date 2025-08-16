@@ -7,12 +7,35 @@ const dotsContainer = document.querySelector('.dots');
 let index = Math.floor(cards.length / 2);
 let middle = Math.floor(cards.length / 2);
 
+let autoSlideInterval;
+let userInteracted = false;
+const autoSlideDelay = 4000;
+const resumeDelay = 5000;
+
+function startAutoSlide() {
+    clearInterval(autoSlideInterval);
+    autoSlideInterval = setInterval(() => {
+        moveToSlide(index + 1);
+    }, autoSlideDelay);
+}
+
+function pauseAutoSlide() {
+    clearInterval(autoSlideInterval);
+    userInteracted = true;
+    setTimeout(() => {
+        userInteracted = false;
+        startAutoSlide();
+    }, resumeDelay);
+}
+
+
+
 cards.forEach((_, i) => {
     console.log(index)
     const dot = document.createElement('span');
     dot.classList.add('dot');
     if (i === index) dot.classList.add('active');
-    dot.addEventListener('click', () => moveToSlide(i));
+    dot.addEventListener('click', () => { moveToSlide(i); pauseAutoSlide(); });
     dotsContainer.appendChild(dot);
 });
 
@@ -38,32 +61,12 @@ function moveToSlide(i) {
 function updateDots() {
     dots.forEach(dot => dot.classList.remove('active'));
     dots[index].classList.add('active');
-    
+
     cards.forEach(card => card.classList.remove('active-card'));
     cards[index].classList.add('active-card');
 }
 
 
-let autoSlideInterval;
-let userInteracted = false;
-const autoSlideDelay = 4000; 
-const resumeDelay = 5000;   
-
-function startAutoSlide() {
-    clearInterval(autoSlideInterval); 
-    autoSlideInterval = setInterval(() => {
-        moveToSlide(index + 1);
-    }, autoSlideDelay);
-}
-
-function pauseAutoSlide() {
-    clearInterval(autoSlideInterval);
-    userInteracted = true;
-    setTimeout(() => {
-        userInteracted = false;
-        startAutoSlide();
-    }, resumeDelay);
-}
 
 leftArrow.addEventListener('click', () => {
     moveToSlide(index - 1);

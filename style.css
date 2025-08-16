@@ -179,7 +179,7 @@ button:active {
 
 .rectangle52 {
     position: absolute;
-    right: 656px;
+    right: 750px;
     bottom: 132px;
 }
 
@@ -309,7 +309,9 @@ button:active {
 }
 
 
-
+.recommendations .description div{
+    max-width: 450px;
+}
 
 .carousel-container {
     position: relative;
@@ -603,7 +605,7 @@ button:active {
 }
 
 .ratings div div {
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 400;
     color: #767676;
     line-height: 10px;
@@ -642,4 +644,7 @@ button:active {
     color: #767676;
     display: flex;
     justify-content: center;
+}
+.copyrite img{
+    margin-right: 5px;
 }
