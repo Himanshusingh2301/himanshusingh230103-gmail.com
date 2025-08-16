@@ -23,6 +23,7 @@ Designed with a clean layout and **Google Font – Open Sans** for better readab
   - Auto-slide every 4s
   - Pauses on interaction and resumes after 5s
   - Dot indicators for active slide
+  - Dot navigation, on clicking on the corresponding dot
   - Left/Right arrow controls
   - Keyboard navigation (`←` / `→`)
 - Contact form and contact info section  
