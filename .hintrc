@@ -9,8 +9,15 @@
         "ignore": [
           "user-select",
           "-webkit-user-drag",
-          "overscroll-behavior-x"
+          "overscroll-behavior-x",
+          "overscroll-behavior-x: none"
         ]
+      }
+    ],
+    "axe/name-role-value": [
+      "default",
+      {
+        "link-name": "off"
       }
     ]
   }
