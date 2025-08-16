@@ -1,0 +1,645 @@
+@import url('https://fonts.googleapis.com/css2?family=Flow+Circular&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans';
+}
+
+.page {
+    width: 100%;
+    background: #F0F0F6;
+    padding-bottom: 35px;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* ----------------------------------navbar------------------------------- */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 130px;
+    max-height: 152px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 82px;
+    box-sizing: border-box;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 2px 4px rgba(152, 152, 152, 0.08);
+    z-index: 10;
+}
+
+.menu{
+    display: flex;
+}
+
+.navlinks {
+    display: flex;
+    gap: 30px;
+    max-width: 604px;
+    height: 37px;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    align-items: center;
+}
+
+.navlinks a  div {
+    text-align: right;
+    border-radius: 5px;
+    padding: 8px 8px;
+    transition: all 0.5s;
+}
+
+.navlinks a div:hover {
+    background: #FFB400;
+}
+
+.navlinks  a {
+    color: #000;
+    text-decoration: none;
+}
+.bar{
+
+    display: none;
+}
+/* --------------------------------header---------------------------------------- */
+.header {
+    width: 100%;
+    height: 676px;
+}
+
+.hero {
+    background-image: url("assets/Group 260.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    position: absolute;
+    top: 130px;
+    height: 545px;
+}
+
+.herocontent {
+    max-width: 721.69px;
+    width: auto;
+    height: 405.17px;
+    margin-top: 100px;
+    margin-left: 86px;
+
+}
+
+.text1 {
+    max-width: 700px;
+    width: auto;
+    height: 150px;
+    font-weight: bold;
+    font-size: 40px;
+
+}
+
+.text1 div span {
+    color: #FFB400;
+}
+
+.text2 {
+    color: #767676;
+    max-width: 500px;
+    width: auto;
+    height: 110px;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 12px;
+    text-transform: capitalize;
+}
+
+.herobutton {
+    width: 218px;
+    height: 69px;
+    margin-top: 22px;
+}
+
+.herobutton div:hover {
+    transform: scale(1.05);
+     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.herobutton div {
+    width: fit-content;
+    padding: 12px 27px;
+    background: #FFB400;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition:  transform 0.25s ease;
+
+}
+
+.ellipse15 {
+    position: absolute;
+    top: 35px;
+    left: 50px;
+}
+
+.ellipse12 {
+    position: absolute;
+    right: 570px;
+    top: 59px;
+}
+
+.ellipse13 {
+    position: absolute;
+    bottom: 80px;
+    right: 520px;
+}
+
+.ellipse16 {
+    position: absolute;
+    bottom: 32px;
+    left: 108px;
+}
+
+.rectangle52 {
+    position: absolute;
+    right: 656px;
+    bottom: 132px;
+}
+
+.rectangle51 {
+    position: absolute;
+    right: 100px;
+    top: 80px;
+}
+
+.poly1 {
+    position: absolute;
+    bottom: 31px;
+    right: 75px;
+}
+
+/* -----------------------projects------------------------------ */
+
+.projects {
+    height: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.description {
+    padding: 0 20px;
+    max-width: 550px;
+    margin-top: 50px;
+}
+
+.description span {
+    font-size: 28px;
+    font-family: "Inter";
+    font-weight: 700;
+}
+
+.description div {
+    margin-top: 10px;
+    max-width: 550px;
+    width: auto;
+    font-size: 13px;
+    color: #767676;
+    line-height: 22px;
+    text-transform: capitalize;
+
+}
+
+.cardscoll {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.row1 {
+    display: flex;
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 330px;
+    min-height: 330px;
+    text-align: left;
+    border: 0.5px solid rgb(200, 198, 198);
+    box-shadow: 6px 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-content {
+    padding: 16px 20px;
+}
+
+.cardtitle {
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+}
+
+.carddesc {
+    font-size: 12px;
+    color: #767676;
+    margin: 4px 0;
+    line-height: 1.5;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+
+}
+
+.tag {
+    font-size: 12px;
+    background: #EFEFEF;
+    padding: 2px 8px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    white-space: nowrap;
+}
+
+/* ----------------------------recommendations------------------------------------ */
+
+.recommendations {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    overflow: hidden;
+    margin-top: 40px;
+    text-align: center;
+
+}
+
+.carousel-track-container {
+    margin: auto;
+    max-width: 1066px;
+    padding: 10px 0;
+    width: 87%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-track {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    transition: transform 0.5s ease;
+}
+
+.crouselcard {
+    text-align: left;
+    padding: 20px 16px;
+    background: white;
+    max-width: 290px;
+    max-height: 280px;
+    transition: transform 0.4s ease;
+}
+
+.crouselcard.active-card {
+    transform: scale(1.08);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+}
+
+.crotitle {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.crodesc {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #767676;
+    text-transform: capitalize;
+    width: 250px;
+}
+
+.arrow {
+    position: absolute;
+    background: white;
+    top: 40%;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.profile {
+    display: flex;
+    margin-top: 25px;
+    gap: 35px;
+    align-items: center;
+}
+
+.profile img {
+    width: 80px;
+    height: 70px;
+    border-radius: 50%;
+
+}
+
+.name {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.role {
+    margin-top: 5px;
+    font-size: 13px;
+    color: #767676;
+    text-transform: capitalize;
+}
+
+.right {
+    right: 20px;
+}
+
+.left {
+    left: 20px;
+}
+
+/* Dots */
+.dots {
+    margin-top: 20px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 4px;
+    background: #FFDE8D;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #FFB400;
+
+}
+
+/* ------------------------------contact-------------------------------- */
+
+.contact {
+    margin-top: 56px;
+    padding: 0 85px;
+}
+
+.contactcontent {
+    display: flex;
+    gap: 20px;
+}
+
+.form {
+    max-width: 723px;
+    width: 68%;
+}
+
+.info {
+    max-width: 320px;
+    width: 32%;
+}
+
+.heading {
+    font-size: 25px;
+    color: #2B2B2B;
+    font-weight: 700;
+}
+
+.form-content {
+    background: white;
+    padding: 27px 30px;
+    margin-top: 20px;
+}
+
+.form-content div {
+    margin-bottom: 20px;
+}
+
+.form-content div div {
+    font-size: 16px;
+    color: #767676;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-content div input {
+    padding: 4px 8px;
+    height: 34px;
+    font-size: 16px;
+    width: 97%;
+    border: none;
+    background: #F0F0F6;
+    border-radius: 5px;
+}
+
+.form-content div input::placeholder {
+    color: #c7c7c7;
+
+}
+
+.form-content div textarea {
+    padding: 6px 10px;
+    font-size: 16px;
+    width: 97%;
+    border: none;
+    background: #F0F0F6;
+    border-radius: 5px;
+    height: 180px;
+    resize: none;
+}
+
+.form-content div textarea::placeholder {
+    color: #c7c7c7;
+    font-family: "Inter";
+}
+
+.form-content button {
+    background: #FFB400;
+    padding: 14px 18px;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: "Inter";
+}
+
+.infocontent {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-card {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+    align-items: center;
+    padding: 0 24px;
+    padding-top: 24px;
+}
+
+.ellipse {
+    height: 28px;
+    width: 28px;
+    padding: 5px;
+    background: #FFB400;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.infodetails {
+    width: 100%;
+}
+
+.infodetails div {
+    display: flex;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.infotitle {
+    font-size: 16px;
+    color: #767676;
+    font-weight: 500;
+}
+
+.infoans {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 13px;
+    font-weight: 400;
+    color: #767676;
+
+}
+
+/* --------------------------------footer----------------------------- */
+
+
+.footerimage {
+    margin-top: 54px;
+    display: flex;
+    gap: 110px;
+    justify-content: center;
+}
+
+.footerinfo {
+    padding: 0 84px;
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerlogo {
+    margin-left: 84px;
+    margin-top: 35px;
+}
+
+.ratings {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.ratings div div {
+    font-size: 12px;
+    font-weight: 400;
+    color: #767676;
+    line-height: 10px;
+
+}
+
+.footerheading {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 17px;
+}
+
+.footerlinks div a {
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #000000;
+    line-height: 30px;
+    transition: all;
+}
+
+.footerlinks div a:hover {
+    color: #eea703;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.copyrite {
+    margin-top: 25px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #767676;
+    display: flex;
+    justify-content: center;
+}
