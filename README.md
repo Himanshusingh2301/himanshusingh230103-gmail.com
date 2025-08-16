@@ -1,4 +1,4 @@
-# JTG - Frontend Home Assignment
+# JTG - Frontend Home Assignment-Set3
 
 A simple and responsive **portfolio-style web template** built using **HTML, CSS, and JavaScript**.  
 It is lightweight, mobile-friendly, and includes interactive elements like a **carousel slider** and a **responsive navigation bar**.  
