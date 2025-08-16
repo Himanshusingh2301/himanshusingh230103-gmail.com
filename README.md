@@ -23,9 +23,10 @@ Designed with a clean layout and **Google Font – Open Sans** for better readab
   - Auto-slide every 4s
   - Pauses on interaction and resumes after 5s
   - Dot indicators for active slide
-  - Dot navigation, on clicking on the corresponding dot
+  - Dot navigation
   - Left/Right arrow controls
   - Keyboard navigation (`←` / `→`)
+  - Drag/Swipe Navigation
 - Contact form and contact info section  
 - Footer with links & social icons  
 - Typography with **Open Sans**  
@@ -59,13 +60,14 @@ This separation ensures the design remains clean on desktops, tablets, and mobil
 ---
 
 ## Carousel Functionality
-- Auto-slide with a 4-second delay  
+- Auto-slide with a 3-second delay  
 - Pauses auto-slide on user interaction  
-- Resumes auto-slide after 5 seconds of inactivity  
+- Resumes auto-slide after 4 seconds of inactivity  
 - Multiple navigation options:
   - Left and right arrows  
   - Keyboard navigation (`←` / `→`)  
   - Clickable dot indicators  
+  - Drag/Swipe Support 
 - The active slide is highlighted with the `.active-card` class  
 - Smooth transitions handled with CSS `transform: translateX`  
 

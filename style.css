@@ -2,12 +2,16 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    overscroll-behavior-x: none;
 }
 
 body {
     margin: 0;
     padding: 0;
     font-family: 'Open Sans';
+    overflow-x: hidden;
+    overscroll-behavior-x: none;
 }
 
 .page {
@@ -43,7 +47,7 @@ button:active {
     z-index: 10;
 }
 
-.menu{
+.menu {
     display: flex;
 }
 
@@ -58,7 +62,7 @@ button:active {
     align-items: center;
 }
 
-.navlinks a  div {
+.navlinks a div {
     text-align: right;
     border-radius: 5px;
     padding: 8px 8px;
@@ -69,14 +73,16 @@ button:active {
     background: #FFB400;
 }
 
-.navlinks  a {
+.navlinks a {
     color: #000;
     text-decoration: none;
 }
-.bar{
+
+.bar {
 
     display: none;
 }
+
 /* --------------------------------header---------------------------------------- */
 .header {
     width: 100%;
@@ -135,7 +141,7 @@ button:active {
 
 .herobutton div:hover {
     transform: scale(1.05);
-     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .herobutton div {
@@ -149,7 +155,7 @@ button:active {
     gap: 5px;
     font-size: 14px;
     cursor: pointer;
-    transition:  transform 0.25s ease;
+    transition: transform 0.25s ease;
 
 }
 
@@ -309,7 +315,7 @@ button:active {
 }
 
 
-.recommendations .description div{
+.recommendations .description div {
     max-width: 450px;
 }
 
@@ -341,6 +347,12 @@ button:active {
 }
 
 .crouselcard {
+    user-select: none;
+    /* Prevent text selection */
+    -webkit-user-drag: none;
+    /* Prevent image drag in Safari/Chrome */
+    -webkit-tap-highlight-color: transparent;
+    /* Remove tap highlight on mobile */
     text-align: left;
     padding: 20px 16px;
     background: white;
@@ -645,6 +657,7 @@ button:active {
     display: flex;
     justify-content: center;
 }
-.copyrite img{
+
+.copyrite img {
     margin-right: 5px;
 }

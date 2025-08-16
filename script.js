@@ -9,7 +9,7 @@ let middle = Math.floor(cards.length / 2);
 
 let autoSlideInterval;
 let userInteracted = false;
-const autoSlideDelay = 4000;
+const autoSlideDelay = 3000;
 const resumeDelay = 5000;
 
 function startAutoSlide() {
@@ -93,6 +93,54 @@ startAutoSlide();
 
 // ---------------------------------------------------------------------------
 
+let isDragging = false;
+let startX = 0;
+let currentX = 0;
+
+track.addEventListener('mousedown', startDrag);
+track.addEventListener('touchstart', startDrag, { passive: true });
+
+track.addEventListener('mousemove', onDrag);
+track.addEventListener('touchmove', onDrag, { passive: true });
+
+track.addEventListener('mouseup', endDrag);
+track.addEventListener('mouseleave', endDrag);
+track.addEventListener('touchend', endDrag);
+
+function startDrag(e) {
+    isDragging = true;
+    startX = e.type.includes('mouse') ? e.pageX : e.touches[0].pageX;
+    track.style.transition = "none"; // disable smooth transition during drag
+    pauseAutoSlide();
+}
+
+function onDrag(e) {
+    if (!isDragging) return;
+
+    currentX = e.type.includes('mouse') ? e.pageX : e.touches[0].pageX;
+    let diff = currentX - startX;
+
+    track.style.transform = `translateX(calc(-${(index - middle) * (cards[0].offsetWidth + 20)}px + ${diff}px))`;
+}
+
+function endDrag(e) {
+    if (!isDragging) return;
+    isDragging = false;
+    track.style.transition = "transform 0.3s ease"; 
+
+    let diff = (e.type.includes('mouse') ? e.pageX : e.changedTouches[0].pageX) - startX;
+
+    if (diff > 50) {
+        moveToSlide(index - 1);
+    } else if (diff < -50) {
+        moveToSlide(index + 1);
+    } else {
+        moveToSlide(index);
+    }
+}
+
+
+// --------------------------------------------------------------
 
 const bar = document.querySelector('.bar');
 const navLinks = document.querySelector('.navlinks');
@@ -100,4 +148,3 @@ const navLinks = document.querySelector('.navlinks');
 bar.addEventListener('click', () => {
     navLinks.classList.toggle('show');
 });
-
