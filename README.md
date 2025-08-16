@@ -20,8 +20,8 @@ Designed with a clean layout and **Google Font – Open Sans** for better readab
 - Hero section with a clean intro heading  
 - Projects section with styled cards  
 - Recommendations carousel:
-  - Auto-slide every 4s
-  - Pauses on interaction and resumes after 5s
+  - Auto-slide every 3s
+  - Pauses on interaction and resumes after 2s
   - Dot indicators for active slide
   - Dot navigation
   - Left/Right arrow controls
