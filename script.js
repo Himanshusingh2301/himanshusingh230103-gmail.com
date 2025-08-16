@@ -10,7 +10,7 @@ let middle = Math.floor(cards.length / 2);
 let autoSlideInterval;
 let userInteracted = false;
 const autoSlideDelay = 3000;
-const resumeDelay = 4000;
+const resumeDelay = 2000;
 
 function startAutoSlide() {
     clearInterval(autoSlideInterval);

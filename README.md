@@ -62,7 +62,7 @@ This separation ensures the design remains clean on desktops, tablets, and mobil
 ## Carousel Functionality
 - Auto-slide with a 3-second delay  
 - Pauses auto-slide on user interaction  
-- Resumes auto-slide after 4 seconds of inactivity  
+- Resumes auto-slide after 2 seconds of inactivity  
 - Multiple navigation options:
   - Left and right arrows  
   - Keyboard navigation (`←` / `→`)  
